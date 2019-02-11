@@ -26,7 +26,7 @@ for nb in range(1000,2001):
 
 		if alldata["type"]== "audio":			
 			s = []
-			s.append(alldata["titre"]) # ici, il faudrait ajouter .split("/")) afin de ne prendre en compte que le titre et non les informations suivantes -> Impossible à tester en fin de soirée : Response 500
+			s.append(alldata["titre"].split(" /")) # ici, il faut ajouter .split("/")) afin de ne prendre en compte que le titre et non les informations suivantes -> Impossible à tester en fin de soirée : Response 500
 			s.append(alldata["createurs"][0])
 			s.append(alldata["dateCreation"])
 			s.append(alldata["descriptionMat"])
